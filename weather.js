@@ -9,7 +9,7 @@ function GetWeather()
         response => response.json()
     ).then(
         data => {
-            document.getElementById("country").innerHTML = data.name;
+            document.getElementById("country").innerHTML = data.name+", " + data.sys.country;
             document.getElementById("temp").innerHTML = Math.round(data.main.temp)+"°C";
             document.getElementById("type").innerHTML = data.weather[0].main + ", <br> Feels like " + Math.round(data.main.feels_like) + "°C";
             document.getElementById("sunrise").innerHTML = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
@@ -69,7 +69,7 @@ function AutoWeather(data)
             response => response.json()
         ).then(
             data => {
-                document.getElementById("country").innerHTML = data.name;
+                document.getElementById("country").innerHTML = data.name+", " + data.sys.country;
                 document.getElementById("temp").innerHTML = Math.round(data.main.temp)+"°C";
                 document.getElementById("type").innerHTML = data.weather[0].main + ", <br> Feels like " + Math.round(data.main.feels_like) + "°C";
                 document.getElementById("sunrise").innerHTML = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
