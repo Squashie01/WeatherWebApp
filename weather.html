@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="weather.css">
+    <title> Weather </title>
+</head>
+<body onload="AutoWeather()">
+
+    <div id="container">
+        <div class="SearchBar">
+            <input type="text" placeholder="Search" id="cityName">
+            <button onclick="GetWeather()"> <i class="fas fa-search"></i> </button>
+        </div>
+        <div class="weather">
+            <div class="main">
+                <p id="country"> New York, NY </p>
+                <h1 id="temp"> 17°C </h1>
+                <p id="type"> SUNNY, <br> Feels Like 28°C </p>
+            </div>
+        </div>
+        <div class="moreWeather">
+            <div class="moreInfo">
+                <div class="sunInfo">
+                    <div class="icon"> <i class="fas fa-sun"></i> </div>
+                    <p> Sunrise </p>
+                    <p id="sunrise"> 6:5541 am </p>
+                </div>
+                <div class="sunInfo">
+                    <div class="icon"> <i class="fas fa-moon"></i> </div>
+                    <p> Sunset </p>
+                    <p id="sunset"> 6:5541 pm </p>
+                </div>
+            </div>
+        </div>
+        <div class="ExtraInfo">
+            <div class="info">
+                <div class="block">
+                    <div id="humidity">78</div>
+                    <div class="label">Humidity</div>
+                </div>
+
+                <div class="line"></div>
+                
+                <div class="block">
+                    <div id="speed">5.14</div>
+                    <div class="label">Wind</div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="block">
+                    <div id="pressure">1013</div>
+                    <div class="label">Pressure</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./weather.js"></script>
+</body>
+</html>
